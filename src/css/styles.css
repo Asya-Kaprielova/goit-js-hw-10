@@ -16,3 +16,227 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+.picker-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+#datetime-picker {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#datetime-picker:hover {
+  border-color: #000000;
+}
+
+#datetime-picker:focus {
+  border-color: #4e75ff;
+}
+
+#datetime-picker:disabled {
+  background-color: #fafafa;
+  color: #989898;
+  border-color: #eef0f5;
+  cursor: not-allowed;
+}
+
+button[data-start] {
+  height: 40px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ховер для активної кнопки */
+button[data-start]:hover:not(:disabled) {
+  background-color: #6c8cff;
+}
+
+/* Стан disabled для кнопки (коли дата не обрана або йде відлік) */
+button[data-start]:disabled {
+  background-color: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  gap: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2e2f42;
+  margin-top: 4px;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay {
+  background: #4e75ff;
+  border-color: #4e75ff;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.flatpickr-day:hover,
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover,
+.flatpickr-day:focus,
+.flatpickr-day.prevMonthDay:focus,
+.flatpickr-day.nextMonthDay:focus {
+  background: #eef0f5;
+  border-color: #eef0f5;
+  color: #2e2f42;
+  border-radius: 50%;
+}
+
+.flatpickr-day.today {
+  border-color: #4e75ff;
+  border-radius: 50%;
+}
+
+.flatpickr-day.today:hover,
+.flatpickr-day.today:focus {
+  background: #4e75ff;
+  color: #ffffff;
+  border-color: #4e75ff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 360px;
+  padding: 24px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+.form input[type='number'] {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form input[type='number']:hover {
+  border-color: #000000;
+}
+
+.form input[type='number']:focus {
+  border-color: #4e75ff;
+}
+
+.form fieldset {
+  display: flex;
+  gap: 24px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form fieldset:hover {
+  border-color: #000000;
+}
+
+.form legend {
+  font-size: 12px;
+  line-height: 1.33;
+  color: #2e2f42;
+  padding: 0 4px;
+}
+
+.form fieldset label {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form input[type='radio']:focus-visible {
+  outline: 2px solid #4e75ff;
+}
+
+.form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
